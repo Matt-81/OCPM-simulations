@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Event"/>
+   <type name="EventAttributeValue"/>
+   <type name="Int"/>
+   <type name="Object"/>
+   <type name="ObjectAttributeValue"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+   <set name="this/AValueA" type="ObjectAttributeValue"/>
+   <set name="this/EValueA" type="EventAttributeValue"/>
+   <set name="this/EventA" type="Event"/>
+   <set name="this/ObjectA" type="Object"/>
+   <set name="this/TypeA" type="RelationType"/>
+</node>
+
+<node color="Green">
+   <type name="Time"/>
+</node>
+
+<node style="Bold" shape="Hexagon">
+   <type name="ObjectType"/>
+</node>
+
+<node style="Bold" shape="Hexagon" color="Blue">
+   <type name="EventType"/>
+</node>
+
+<node style="Dashed">
+   <type name="ObjectAttribute"/>
+</node>
+
+<node style="Dashed" shape="Box" color="Blue">
+   <type name="EventAttribute"/>
+</node>
+
+<node visible="no" numberatoms="no">
+   <type name="Qualifier"/>
+   <type name="RelationType"/>
+</node>
+
+<edge color="Black">
+   <relation name="oHas"> <type name="Object"/> <type name="ObjectAttributeValue"/> </relation>
+</edge>
+
+<edge color="Blue">
+   <relation name="eHas"> <type name="Event"/> <type name="EventAttributeValue"/> </relation>
+</edge>
+
+<edge color="Green">
+   <relation name="observedAt"> <type name="Event"/> <type name="Time"/> </relation>
+</edge>
+
+<edge visible="no" merge="no" constraint="no">
+   <relation name="$Default_e"> <type name="EventType"/> <type name="Event"/> </relation>
+   <relation name="$Default_e&apos;"> <type name="Time"/> <type name="Event"/> </relation>
+   <relation name="$Default_e&apos;&apos;"> <type name="EventAttributeValue"/> <type name="Event"/> </relation>
+   <relation name="$Default_eav"> <type name="EventAttribute"/> <type name="EventAttributeValue"/> </relation>
+   <relation name="$Default_o"> <type name="ObjectType"/> <type name="Object"/> </relation>
+   <relation name="$Default_o&apos;"> <type name="ObjectAttributeValue"/> <type name="Object"/> </relation>
+   <relation name="$Default_oav"> <type name="ObjectAttribute"/> <type name="ObjectAttributeValue"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
