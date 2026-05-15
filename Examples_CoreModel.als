@@ -119,6 +119,8 @@ open MetaModel_CoreModel_Try01
 // }
 
 // run po_scenario1
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 one sig Requisition, Order, Invoice, Payment extends ObjectType {}
 

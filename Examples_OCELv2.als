@@ -152,7 +152,8 @@ open MetaModel_OCELv2_Try01
 
 // run po_scenario1
 
-
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 one sig Requisition, Order, Invoice, Payment extends ObjectType {}
 
 one sig CreateR, ApproveR, CreateO, ChangeOQuantity,
